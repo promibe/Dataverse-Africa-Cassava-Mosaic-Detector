@@ -10,7 +10,7 @@ from tensorflow.keras.applications import MobileNetV2
 # Function to predict on a single image
 
 class_names = ['cassava_mosaic', 'healthy_cassava', 'non_cassava']
-model = tf.keras.models.load_model('cassava_classifier_final.h5')
+model = tf.keras.models.load_model('model/cassava_classifier_final.h5')
 
 def model_prediction(image_path):
     """
