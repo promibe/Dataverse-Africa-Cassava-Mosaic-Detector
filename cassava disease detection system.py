@@ -26,7 +26,7 @@ def model_prediction(image_path):
     predicted_class = class_names[np.argmax(predictions[0])]
     confidence = np.max(predictions[0])
     
-    return predicted_class, confidence, predictions[0]
+    return predicted_class
 
 
 
@@ -96,6 +96,6 @@ if app_mode == 'Disease Recognition':
             if text_image is not None:
                 result_index = model_prediction(text_image)
                 st.image(text_image, use_column_width=True)
-                st.success(f"Our Model is Predicting its a {class_names[result_index]}")
+                st.success(f"Our Model is Predicting its a {result_index}")
             else:
                 st.warning("⚠️ Kindly upload an image before clicking the button.")
